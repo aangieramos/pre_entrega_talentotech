@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Proyecto Web</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER & NAV -->
+  <header class="header">
+    <div class="logo">
+      <h2>MiMarca</h2>
+    </div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- INICIO / HERO SECTION -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h1>Bienvenidos a Mi Proyecto</h1>
+        <p>Descubre nuestros productos y servicios diseñados especialmente para ti.</p>
+      </div>
+      <div class="hero-media">
+        <!-- Imagen / Multimedia -->
+        <img src="assets/presentacion.png" alt="Imagen de presentación de la marca">
+      </div>
+    </section>
+
+    <!-- SECCIÓN PRODUCTOS (FLEXBOX) -->
+    <section id="productos" class="productos">
+      <h2>Nuestros Productos</h2>
+      <div class="cards-container">
+        <article class="card">
+          <img src="assets/collar1.png" alt="Producto 1">
+          <h3>Producto 1</h3>
+          <p>Descripción breve del producto 1 con detalles sobresalientes.</p>
+          <span class="precio">$25.00</span>
+        </article>
+
+        <article class="card">
+          <img src="assets/collar2.png" alt="Producto 2">
+          <h3>Producto 2</h3>
+          <p>Descripción breve del producto 2 con detalles sobresalientes.</p>
+          <span class="precio">$35.00</span>
+        </article>
+
+        <article class="card">
+          <img src="assets/collar3.png" alt="Producto 3">
+          <h3>Producto 3</h3>
+          <p>Descripción breve del producto 3 con detalles sobresalientes.</p>
+          <span class="precio">$45.00</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN RESEÑAS (GRID) -->
+    <section id="resenas" class="resenas">
+      <h2>Reseñas de Clientes</h2>
+      <div class="grid-resenas">
+        <div class="resena-card">
+          <p>"Excelente servicio y atención al cliente. Totalmente recomendado."</p>
+          <h4>María García</h4>
+        </div>
+        <div class="resena-card">
+          <p>"Los productos superaron mis expectativas en calidad y rapidez de entrega."</p>
+          <h4>Carlos López</h4>
+        </div>
+        <div class="resena-card">
+          <p>"Una experiencia de compra insuperable. Volveré a comprar pronto."</p>
+          <h4>Ana Martínez</h4>
+        </div>
+        <div class="resena-card">
+          <p>"Muy buena relación precio-calidad. Cumplieron con todo lo prometido."</p>
+          <h4>Pedro Gómez</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO (FORMULARIO CON FORMSPREE) -->
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <form action="https://formspree.io/f/TU_FORM_ID" method="POST" class="formulario">
+        <div class="campo">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+        </div>
+
+        <div class="campo">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="_replyto" required placeholder="tuemail@ejemplo.com">
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 MiMarca - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
