@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ponte en contacto con el equipo de MiMarca.">
+  <title>Contacto - Mi Proyecto Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <h2>MiMarca</h2>
+    </div>
+    <nav class="nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="resenias.html">Reseñas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carrito.html">🛒 Carrito <span id="contador-carrito" class="badge-carrito">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contacto">
+      <h2>Contacto</h2>
+      <form action=https://formspree.io/f/mgakplez method="POST" class="formulario" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+        </div>
+
+        <div class="campo">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="_replyto" required placeholder="tuemail@ejemplo.com">
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 MiMarca - Todos los derechos reservados.</p>
+  </footer>
+
+  <script type="module" src="../js/contacto.js"></script>
+</body>
+</html>

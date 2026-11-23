@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "nombre": "Collar Perlas Clásico",
+    "img": "assets/collar1.png",
+    "precio": 25.00,
+    "descripcion": "Descripción breve del producto 1 con detalles sobresalientes."
+  },
+  {
+    "id": "2",
+    "nombre": "Collar Two Corazones",
+    "img": "assets/collar2.png",
+    "precio": 35.00,
+    "descripcion": "Descripción breve del producto 2 con detalles sobresalientes."
+  },
+  {
+    "id": "3",
+    "nombre": "Collar Piedra Natural",
+    "img": "assets/collar3.png",
+    "precio": 45.00,
+    "descripcion": "Descripción breve del producto 3 con detalles sobresalientes."
+  }
+]

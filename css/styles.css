@@ -1,4 +1,3 @@
-/* RESET BÁSICO */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +9,13 @@ body {
   line-height: 1.6;
   color: #4c015f;
   background-color: #f9f9f9; /* Background general */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 /* HEADER Y NAVEGACIÓN */
@@ -28,6 +34,7 @@ body {
 .nav-list {
   list-style: none; /* Lista desordenada */
   display: flex;
+  align-items: center;
   gap: 1.5rem;
 }
 
@@ -39,7 +46,16 @@ body {
 }
 
 .nav-list a:hover {
-  color: #520769;
+  color: #d8b4fe;
+}
+
+.badge-carrito {
+  background-color: #0284c7;
+  color: #ffffff;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 /* HERO SECTION */
@@ -49,7 +65,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 3rem 1.5rem;
-  background: linear-gradient(135deg, hwb(292 12% 77%) 0%, hwb(292 12% 77%) 100%); /* Fondo degradado */
+  background: linear-gradient(135deg, hwb(292 12% 77%) 0%, #520769 100%); /* Fondo degradado */
   color: #fff;
 }
 
@@ -94,6 +110,8 @@ body {
 
 .card img {
   width: 100%;
+  height: 200px;
+  object-fit: contain;
   border-radius: 6px;
   margin-bottom: 1rem;
 }
@@ -106,7 +124,22 @@ body {
   font-weight: 600;
   color: #0284c7;
   font-size: 1.2rem;
-  margin-top: 1rem;
+  margin: 0.8rem 0;
+}
+
+.btn-agregar, .btn-accion {
+  background-color: #520769;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-agregar:hover, .btn-accion:hover {
+  background-color: #700b8f;
 }
 
 /* SECCIÓN RESEÑAS - CSS GRID */
@@ -146,6 +179,7 @@ body {
   padding: 4rem 2rem;
   max-width: 600px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .contacto h2 {
@@ -194,7 +228,128 @@ body {
 }
 
 .btn-enviar:hover {
+  background-color: #700b8f;
+}
+
+/* CARRITO EN LISTA VERTICAL CON FILAS HORIZONTALES */
+.carrito-seccion {
+  padding: 3rem 1.5rem;
+  max-width: 850px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#contenedor-carrito {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item-carrito {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  gap: 1.25rem;
+}
+
+.item-carrito img {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.item-carrito > div:first-of-type {
+  flex: 1;
+  text-align: left;
+}
+
+.item-carrito h4 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  color: #4c015f;
+}
+
+.item-carrito p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.controles-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-cant {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn-cant:hover {
+  background: #e2e8f0;
+}
+
+.btn-eliminar {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background-color: #b91c1c;
+}
+
+.acciones-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* NOTIFICACIÓN TOAST (reemplaza al alert) */
+.toast-notificacion {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
   background-color: #520769;
+  color: #ffffff;
+  padding: 0.9rem 1.4rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+  font-size: 0.95rem;
+  z-index: 2000;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast-notificacion.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* FOOTER */
@@ -215,6 +370,8 @@ body {
 
   .nav-list {
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .contacto {
@@ -223,5 +380,9 @@ body {
 
   .formulario {
     padding: 1.2rem;
+  }
+
+  .item-carrito {
+    flex-wrap: wrap;
   }
 }
